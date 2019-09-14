@@ -35,8 +35,8 @@ function draw() {
   if (fall_flag==1){
     vx += gx;
     vy += gy;
-    cord_x += vx;
-    cord_y -= vy;
+    cord_x += vy;
+    cord_y += vx;
     fill(0);
     circle(cord_x, cord_y, radius);
   }
