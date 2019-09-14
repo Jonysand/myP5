@@ -31,7 +31,9 @@ function draw() {
   
   gx = g * Math.sin(radians(rotationX))
   gy = g * Math.sin(radians(rotationY))
-  
+  textSize(32);
+  text(String(rotationX), 10, 30);
+  text(String(rotationY), 10, 60);
   if (fall_flag==1){
     vx += gx;
     vy += gy;
