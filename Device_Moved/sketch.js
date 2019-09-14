@@ -4,6 +4,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(60);
   reset();
+  textSize(16);
 }
 
 function reset(){
@@ -30,11 +31,10 @@ function draw() {
   }
   if (cord_y >= displayHeight-diameter || cord_y <= diameter){
     vy = -vy;
-
-  
+  }
+    
   gx = g * Math.sin(radians(rotationX))
   gy = g * Math.sin(radians(rotationY))
-  textSize(16);
   if (fall_flag==1){
     vx += gx;
     vy += gy;
