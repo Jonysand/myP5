@@ -1,9 +1,7 @@
-width = 400;
-height = 400;
-radius = 10
+diameter = 10
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
   frameRate(60);
   reset();
 }
@@ -22,12 +20,12 @@ function reset(){
 
 function draw() {
   clear();
-  if (cord_x>=windowWidth-radius || cord_x<=radius){
+  if (cord_x >= displayWidth-diameter || cord_x <= diameter){
     vx = -vx;
   }
-  if (cord_y>=windowHeight-radius || cord_y<=radius){
+  if (cord_y >= displayHeight-diameter || cord_y <= diameter){
     vy = -vy;
-  }
+
   
   gx = g * Math.sin(radians(rotationX))
   gy = g * Math.sin(radians(rotationY))
@@ -38,11 +36,12 @@ function draw() {
     cord_x += vy;
     cord_y += vx;
     fill(0);
-    circle(cord_x, cord_y, radius);
-    text('Rx'+String(int(rotationX)), 10, 15);
-    text('Ry'+String(int(rotationY)), 10, 30);
-    text('Cx'+String(int(cord_x)), 10, 45);
-    text('Cy'+String(int(cord_y)), 10, 60);
+    circle(cord_x, cord_y, diameter);
+    text('Rx: '+String(int(rotationX)), 10, 15);
+    text('Ry: '+String(int(rotationY)), 10, 30);
+    text('Cx: '+String(int(cord_x)), 10, 45);
+    text('Cy: '+String(int(cord_y)), 10, 60);
+	text('tap to have a new ball', 10, 75)
   }
 }
 
