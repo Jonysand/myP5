@@ -36,12 +36,12 @@ function draw() {
     cord_x += vy;
     cord_y += vx;
     fill(0);
-    circle(cord_x, cord_y, diameter);
-    text('Rx: '+String(int(rotationX)), 10, 15);
+	text('Rx: '+String(int(rotationX)), 10, 15);
     text('Ry: '+String(int(rotationY)), 10, 30);
     text('Cx: '+String(int(cord_x)), 10, 45);
     text('Cy: '+String(int(cord_y)), 10, 60);
 	text('tap to have a new ball', 10, 75)
+    circle(cord_x, cord_y, diameter);
   }
 }
 
