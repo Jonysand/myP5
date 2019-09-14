@@ -23,10 +23,10 @@ function reset(){
 function draw() {
   clear();
   if (cord_x>=windowWidth-radius || cord_x<=radius){
-    vx = vx;
+    vx = -vx;
   }
   if (cord_y>=windowHeight-radius || cord_y<=radius){
-    vy = vy;
+    vy = -vy;
   }
   
   gx = g * Math.sin(radians(rotationX))
@@ -35,8 +35,8 @@ function draw() {
   if (fall_flag==1){
     vx += gx;
     vy += gy;
-    cord_x += vx;
-    cord_y += vy;
+    cord_x += vy;
+    cord_y += vx;
     fill(0);
     circle(cord_x, cord_y, radius);
     text('Rx'+String(int(rotationX)), 10, 15);
