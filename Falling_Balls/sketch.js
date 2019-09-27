@@ -14,8 +14,9 @@ function reset(){
 }
 
 function draw() {
-  if (cord_x>=windowWidth || cord_y>=windowWidth){
-    v = -v;
+  hit = collideLineCircle(0, windowHeight, windowWidth, windowHeight, cord_x, cord_y, 10)
+  if (hit){
+    v = (-0.5)*v;
     //reset();
   }
   
